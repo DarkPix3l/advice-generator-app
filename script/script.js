@@ -12,14 +12,14 @@ function repeatRequest() {
     .then((data) => {
       container.innerHTML = `<p> ADVICE&ensp;#${data.slip.id}</p>
                           <div class="quote">
-                            <p><q>${data.slip.advice}</q></p>
+                            <q>${data.slip.advice}</q>
                           </div>`;
     })
     .catch((error) => {
       console.error("Error:", error);
       container.innerHTML = `<p>ADVICE #194</p>
                               <div class="quote">
-                              <p><q>Don't always rely on your comforts.</q></p>
+                              <q>Don't always rely on your comforts.</q>
                               </div>`;
       allertInfo.textContent =
         "Oops! Something went wrong while fetching the advice. Please try again later.";
@@ -27,5 +27,4 @@ function repeatRequest() {
 }
 
 document.addEventListener("DOMContentLoaded", repeatRequest); //Run the function once before starting the interval because there was no messages at the beginning
-
 nextAdvice.addEventListener("click", repeatRequest);

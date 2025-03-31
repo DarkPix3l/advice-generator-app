@@ -33,7 +33,7 @@ ol, ul {
   list-style: none;
 }
 
-p {
+p, q {
   color: white;
 }
 
@@ -67,7 +67,7 @@ main {
   letter-spacing: 3px;
   font-size: 0.8rem;
 }
-#card #container .quote p {
+#card #container .quote q {
   font-size: 1.4rem;
   font-weight: 600;
   line-height: 40px;
