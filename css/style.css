@@ -109,10 +109,12 @@ main {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
-}
-#card #nextAdviceBTN:hover {
-  box-shadow: 0px 0px 55px 1px hsl(150, 100%, 66%);
   cursor: pointer;
+}
+@media (hover: hover) {
+  #card #nextAdviceBTN:hover {
+    box-shadow: 0px 0px 55px 1px hsl(150, 100%, 66%);
+  }
 }
 
 #info {
@@ -124,28 +126,39 @@ main {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  padding: 40px;
-}
-footer p {
-  font-size: 0.9rem;
-  color: hsl(217, 19%, 38%);
-  word-spacing: 2px;
-}
-footer p a {
-  color: hsl(150, 100%, 66%);
+  display: none;
 }
 
 @media (min-width: 768px) {
+  main {
+    min-height: 100dvh;
+    gap: 100px;
+  }
   #card {
     width: 400px;
+  }
+  footer {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+  }
+  footer p {
+    font-size: 0.7rem;
+    color: hsl(217, 19%, 38%);
+    word-spacing: 2px;
+  }
+  footer p a {
+    color: hsl(150, 100%, 66%);
   }
 }
 @media (min-width: 1440px) {
   #card {
     width: 550px;
   }
-}
-/* .attribution { font-size: 11px; text-align: center; }
- *  .attribution a { color: hsl(228, 45%, 44%); }  *//*# sourceMappingURL=style.css.map */
+  footer p {
+    font-size: 0.9rem;
+  }
+}/*# sourceMappingURL=style.css.map */
